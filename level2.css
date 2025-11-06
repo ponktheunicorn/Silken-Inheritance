@@ -1,0 +1,91 @@
+:root {
+  --beige: #fff7e6;
+  --accent: #111;
+  --purple: #604aa7;
+}
+
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  background: var(--beige);
+  height: 100vh;
+  overflow: hidden;
+  font-family: "violeta", sans-serif;
+}
+
+/* Buttons */
+.btn-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-icon:hover {
+  transform: scale(1.05);
+}
+
+/* Inventory Button */
+.btn-inventory {
+  top: 20px;
+  left: 20px;
+  background-image: url('img/invenbut.png');
+}
+
+.btn-inventory:hover {
+  transform: rotate(45deg);
+}
+
+/* Settings Button */
+.btn-settings {
+  top: 20px;
+  right: 20px;
+  background-image: url('img/setbut.png');
+}
+
+.btn-settings:hover {
+  transform: rotate(90deg);
+}
+
+/* Inventory Panel */
+.inventory-bar {
+  position: absolute;
+  top: 15px;
+  left: 120px; /* nằm ngay sau nút inventory */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #1a2851;
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 10px 15px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.inventory-bar.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.inventory-slot {
+  width: 60px;
+  height: 60px;
+  background-image: url('img/rec1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #000; 
+  border-radius: 8px;
+}

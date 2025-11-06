@@ -1,0 +1,141 @@
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Modal content */
+.modal-content {
+  background: url('img/setting.png') no-repeat center center/cover;
+  background-color: transparent;
+  margin: 10% auto;
+  padding: 60px;
+  border-radius: 12px;
+  width: 625px;
+  max-width: 90%;
+  color: #000;
+  font-family: "violeta", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Modal title */
+.modal-content h2 {
+  font-size: 30pt;
+  margin: 10px 0 0 0;
+}
+
+/* Volume control */
+.volume-control {
+  display: flex;        
+  align-items: center;
+  gap: 10px;
+}
+
+.volume-control label {
+  flex: 0 0 100px; 
+  text-align: left;
+}
+
+.volume-control input[type="range"] {
+  flex: 1;               
+}
+
+/* Slider style */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #fff7e6;
+  border: 2px solid #000;
+  border-radius: 6px;
+  outline: none;
+  margin: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #604aa7;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #604aa7;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #fff7e6;      
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  height: 12px;
+}
+
+input[type="range"]::-ms-fill-lower,
+input[type="range"]::-ms-fill-upper {
+  background: #fff7e6;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 24px;
+  height: 24px;
+  background: #604aa7;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Buttons in modal */
+.btn-close, .btn-backmenu, .btn-restart {
+  align-self: center;
+  width: 200px;
+  padding: 5px 0;
+  background: #fff7e6;
+  border: 2px solid #000;
+  font-size: 15px;
+  font-family: "violeta", sans-serif;
+  font-style: italic;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-close:hover,
+.btn-backmenu:hover,
+.btn-restart:hover {
+  background: #604aa7;
+  transform: translateY(-3px);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Silken Inheritance</title>
+<link rel="stylesheet" href="https://use.typekit.net/knx0svq.css">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="modal.css">
+</head>
+<body>
+  <div class="main-container">
+    <h1>Silken Inheritance</h1>
+    <video autoplay loop muted playsinline>
+      <source src="video/homepage.mp4" type="video/mp4">
+    </video>
+    <div class="button-container">
+      <a href="menu.html" id="btnPlay" class="btn">Play</a>
+      <div class="divider"></div>
+      <button class="btn" id="btnSettings">Settings</button>
+    </div>
+  </div>
+
+  <div id="settingsModal" class="modal">
+  <div class="modal-content">
+    <h2>Settings</h2>
+
+    <div class="volume-control">
+      <label for="masterVolume">Master Volume</label>
+      <input type="range" id="masterVolume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+    <div class="volume-control">
+      <label for="musicVolume">Music Volume</label>
+      <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+    <div class="volume-control">
+      <label for="sfxVolume">Sound Effect Volume</label>
+      <input type="range" id="sfxVolume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+    <button class="btn btn-close" id="btnClose">Close</button>
+  </div>
+</div>
+</div>
+
+<iframe id="audioFrame" src="audio.html" style="display:none;"></iframe>
+<audio id="sfx" src="audio/sfx/click.wav"></audio>
+<script src="home.js"></script>
+</body>
+</html>

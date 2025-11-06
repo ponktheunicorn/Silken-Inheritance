@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu</title>
+<link rel="stylesheet" href="https://use.typekit.net/knx0svq.css">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="stylesheet" href="modal.css">
+<link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <button id="btnBack" class="btn-icon btn-back">Back to home</button>
+
+  <button id="btnSettings" class="btn-icon btn-settings"></button>
+
+  <div class="level-selector">
+  <button class="nav-btn" id="prevLevel">
+    <img src="img/leftarrow.png" alt="Previous">
+  </button>
+
+  <div class="level-display">
+    <img src="img/level1.png" alt="Level 1">
+    <h3>Level 1</h3>
+    <a href="level1.html" class="btn level-play">Play</a>
+  </div>
+
+  <button class="nav-btn" id="nextLevel">
+    <img src="img/rightarrow.png" alt="Next">
+  </button>
+  </div>
+
+  <div id="settingsModal" class="modal">
+  <div class="modal-content">
+    <h2>Settings</h2>
+
+    <div class="volume-control">
+      <label for="masterVolume">Master Volume</label>
+      <input type="range" id="masterVolume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+    <div class="volume-control">
+      <label for="musicVolume">Music Volume</label>
+      <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+    <div class="volume-control">
+      <label for="sfxVolume">Sound Effect Volume</label>
+      <input type="range" id="sfxVolume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+    <button class="btn btn-close" id="btnClose">Close</button>
+  </div>
+</div>
+</div>
+
+  <audio id="sfx" src="audio/sfx/click.wav"></audio>
+  <iframe id="audioFrame" src="audio.html" style="display:none;"></iframe>
+  <script src="menu.js"></script>
+  <script src="audio.js"></script>
+</body>
+</html>
