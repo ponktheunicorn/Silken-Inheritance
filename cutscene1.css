@@ -1,0 +1,75 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.cutscene-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 1s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+.btn-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-image: url('img/playbut.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 3;
+}
+
+.btn-play:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+#skipButton {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 20px;
+  background: #fff7e6;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: "violeta", sans-serif;
+  font-size: 16pt;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#skipButton:hover {
+  background: #604aa7;
+  color: #fff7e6;
+}
+
+

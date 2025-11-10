@@ -1,0 +1,122 @@
+:root {
+  --beige: #f5efe0;
+  --accent: #111;
+  --purple: #604aa7;
+}
+
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #1a2851;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "violeta", sans-serif;
+}
+
+/* Nút góc */
+.btn-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-icon:hover {
+  transform: scale(1.05);
+}
+
+.btn-back {
+  top: 20px;
+  left: 20px;
+  width: 250px;
+  height: 80px;
+  background-image: url('img/backbut1.png'); 
+  font-family: "violeta", sans-serif;
+  font-style: italic;
+  font-size: 20pt;
+}
+
+.btn-back:hover {
+  background-image: url('img/backbut2.png');
+  transform: scale(1.05);
+}
+
+.btn-settings {
+  top: 20px;
+  right: 20px;
+  background-image: url('img/setbut.png');
+}
+
+.btn-settings:hover {
+    transform: rotate(90deg);
+}
+
+/* Level selector */
+.level-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 900px; 
+  margin: 50px auto 0 auto;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 130px;  
+  height: 130px; 
+}
+
+.nav-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.level-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.level-display img {
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+}
+
+.level-display h3 {
+  margin-top: -50px;
+  font-size: 0;
+  color: #fff;
+}
+
+.level-play {
+  width: 200px;
+  padding: 10px 0;
+  text-align: center;
+  background: #fff7e6;
+  border: 2px solid #000;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: "violeta", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #000;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.level-play:hover {
+  background: #eb2c8f;
+  color: #fff;
+  transform: translateY(-3px);
+}

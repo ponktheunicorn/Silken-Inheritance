@@ -1,0 +1,255 @@
+:root {
+  --beige: #fff7e6;
+  --accent: #111;
+  --purple: #604aa7;
+}
+
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-image: url('img/level3bgr.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "violeta", sans-serif;
+}
+
+/* Buttons */
+.btn-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 9999;
+}
+
+.btn-icon:hover {
+  transform: scale(1.05);
+}
+
+/* Inventory Button */
+.btn-inventory {
+  top: 20px;
+  left: 20px;
+  background-image: url('img/invenbut.png');
+}
+
+.btn-inventory:hover {
+  transform: rotate(45deg);
+}
+
+/* Settings Button */
+.btn-settings {
+  top: 20px;
+  right: 20px;
+  background-image: url('img/setbut.png');
+}
+
+.btn-settings:hover {
+  transform: rotate(90deg);
+}
+
+/* Inventory Panel */
+.inventory-bar {
+  position: absolute;
+  top: 15px;
+  left: 120px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #1a2851;
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 10px 15px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.inventory-bar.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* --- CHỈNH LẠI Ở ĐÂY --- */
+.inventory-slot {
+  width: 60px;
+  height: 60px;
+  background-image: url('img/rec1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #000; 
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventory-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.inventory-slot img:hover {
+  transform: scale(1.05);
+}
+
+.collectible:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* MAP SELECTION */
+.map-section {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.map-section.active {
+  display: block;
+}
+
+/* Room */
+.room {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.room-object {
+  position: absolute;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  width: 80px;
+  height: 80px;
+  transition: transform 0.2s ease;
+}
+
+.nav-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.nav-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+#btnPrev { left: 20px; }
+#btnNext { right: 20px; }
+
+/* MAP1 */
+.house{
+  top: 100px; 
+  right: 110px; 
+  width: 1300px; 
+  height: auto; 
+}
+
+.girl2{
+  top: 300px; 
+  right: 800px; 
+  width: 150px; 
+  height: auto; 
+}
+
+.bubble2{
+  top: 200px; 
+  right: 630px; 
+  width: 200px; 
+  height: auto;
+  opacity: 0;
+  pointer-events: none; /* tránh click trúng */
+  transition: opacity 0.3s ease; 
+}
+
+.coin{
+  top: 430px; 
+  right: 280px; 
+  width: 50px; 
+  height: auto; 
+}
+
+.window{
+  top: 400px; 
+  right: 250px; 
+  width: 110px; 
+  height: auto; 
+}
+
+/* MAP2 */
+.feed1{
+  top: 200px; 
+  right: 110px; 
+  width: 700px; 
+  height: auto; 
+}
+
+.feed2{
+  top: 200px; 
+  right: 700px; 
+  width: 700px; 
+  height: auto; 
+}
+
+/* MAP3 */
+.market{
+  top: 4.7px; 
+  right: 50px; 
+  width: 1400px; 
+  height: auto; 
+}
+
+.seller{
+  top: 380px; 
+  right: 50px; 
+  width: 700px; 
+  height: auto; 
+}
+
+.bubble3{
+  top: 230px; 
+  right: 100px; 
+  width: 200px; 
+  height: auto; 
+  opacity: 0;
+  pointer-events: none; /* tránh click trúng */
+  transition: opacity 0.3s ease;
+}
+
