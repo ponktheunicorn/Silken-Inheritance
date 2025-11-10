@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Level</title>
+<title>Level 3</title>
 <link rel="stylesheet" href="https://use.typekit.net/knx0svq.css">
 <link rel="icon" type="image/png" href="img/logo.png">
 <link rel="stylesheet" href="modal.css">
-<link rel="stylesheet" href="level2.css">
+<link rel="stylesheet" href="level3.css">
 </head>
 <body>
 
@@ -26,6 +26,34 @@
     <div class="inventory-slot"></div>
     <div class="inventory-slot"></div>
   </div>
+
+  <!-- Map Container -->
+  <div id="mapContainer">
+    <div class="map-section active" id="map1">
+      <img src="img/house.png" class="room-object house">
+      <img src="img/girl2.png" class="room-object girl2">
+      <img src="img/bubble2.png" class="room-object bubble2">
+      <img src="img/coin.png" class="room-object collectible coin">
+      <img src="img/window.png" class="room-object window">
+    </div>
+    <div class="map-section" id="map2">
+      <img src="img/feed2.png" class="room-object feed2">
+      <img src="img/feed1.png" class="room-object feed1">
+    </div>
+    <div class="map-section" id="map3">
+      <img src="img/market.png" class="room-object market">
+      <img src="img/seller.png" class="room-object seller">
+      <img src="img/bubble3.png" class="room-object bubble3">
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+<button id="btnPrev" class="nav-btn">
+  <img src="img/leftarrow.png" alt="Previous">
+</button>
+<button id="btnNext" class="nav-btn">
+  <img src="img/rightarrow.png" alt="Next">
+</button>
 
   <!-- Settings Modal -->
   <div id="settingsModal" class="modal">
@@ -60,6 +88,6 @@
   <iframe id="audioFrame" src="audio.html" style="display:none;"></iframe>
 
   <script src="audio.js"></script>
-  <script src="level2.js"></script>
+  <script src="level3.js"></script>
 </body>
 </html>
